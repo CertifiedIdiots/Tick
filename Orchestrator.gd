@@ -28,14 +28,15 @@ func _ready():
 func select_skill(skill: Skill):
 	skill_selected = skill
 	toggle_parts(true)
-	skills_container.get_node(skill.name).toggle(false)
-	for s in player.skills:
-		if s != skill:
-			skills_container.get_node(s.name).toggle(true)
+	#skills_container.get_node(skill.name).toggle(false)
+	#for s in player.skills:
+	#	if s != skill:
+	#		skills_container.get_node(s.name).toggle(true)
 
 func use_skill(on: Part):
 	skill_selected.use(on)
 	skills_container.get_node(skill_selected.name).toggle(true)
+	skill_selected.cooldown = 0
 	skill_selected = null
 	toggle_parts(false)
 
@@ -44,4 +45,5 @@ func toggle_parts(value: bool):
 		enemy_container.find_child(part.name).toggle(value)
 
 func _process(delta):
-	pass
+	for skill in player.skills:
+		skill.cooldown = min(skill.max_cooldown, skill.cooldown + delta)

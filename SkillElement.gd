@@ -2,6 +2,7 @@ extends VBoxContainer
 
 var skill: Skill
 var orchestrator
+var selected = false
 
 func init(skill: Skill, orchestrator):
 	self.skill = skill
@@ -14,11 +15,13 @@ func init(skill: Skill, orchestrator):
 func _process(delta):
 	if skill != null:
 		$ProgressBar.value = skill.cooldown
+		if skill.cooldown < skill.max_cooldown or orchestrator.skill_selected == skill:
+			$Button.disabled = true
+		else:
+			$Button.disabled = false
 
 func _on_button_pressed():
-	print(self.name)
 	orchestrator.select_skill(skill)
-	
 
 func toggle(value = null):
 	$Button.disabled = !value
