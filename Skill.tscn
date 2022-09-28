@@ -13,13 +13,11 @@ size_flags_vertical = 3
 script = ExtResource("1_7wodf")
 
 [node name="Button" type="Button" parent="."]
-layout_mode = 2
 offset_right = 1152.0
 offset_bottom = 617.0
 size_flags_vertical = 3
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-layout_mode = 2
 offset_top = 621.0
 offset_right = 1152.0
 offset_bottom = 648.0

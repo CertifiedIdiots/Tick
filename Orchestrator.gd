@@ -28,10 +28,6 @@ func _ready():
 func select_skill(skill: Skill):
 	skill_selected = skill
 	toggle_parts(true)
-	#skills_container.get_node(skill.name).toggle(false)
-	#for s in player.skills:
-	#	if s != skill:
-	#		skills_container.get_node(s.name).toggle(true)
 
 func use_skill(on: Part):
 	skill_selected.use(on)
