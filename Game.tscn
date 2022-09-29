@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bum0x48y2qa72"]
+[gd_scene load_steps=4 format=3 uid="uid://bum0x48y2qa72"]
 
 [ext_resource type="PackedScene" uid="uid://c1j3gilfd1ms5" path="res://Part.tscn" id="1_80oft"]
+[ext_resource type="PackedScene" uid="uid://dmssmckfivbqm" path="res://HealthBar.tscn" id="1_qteiv"]
 [ext_resource type="Script" path="res://Orchestrator.gd" id="3_q3ps2"]
 
 [node name="Control" type="Control"]
@@ -31,44 +32,33 @@ offset_right = 381.0
 offset_bottom = 322.0
 size_flags_horizontal = 3
 
-[node name="Health" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Player"]
+[node name="HealthBar" parent="VBoxContainer/HBoxContainer/Player" instance=ExtResource("1_qteiv")]
 layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_right = 381.0
-offset_bottom = 27.0
-size_flags_horizontal = 3
-size_flags_vertical = 0
-
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Player/Health"]
-layout_mode = 2
-offset_right = 62.0
-offset_bottom = 26.0
-text = "HEALTH"
-
-[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/HBoxContainer/Player/Health"]
-layout_mode = 2
-offset_left = 66.0
-offset_right = 381.0
-offset_bottom = 27.0
-size_flags_horizontal = 3
-value = 100.0
+offset_bottom = 54.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Head" parent="VBoxContainer/HBoxContainer/Player" instance=ExtResource("1_80oft")]
 layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_top = 31.0
+offset_top = 58.0
 offset_right = 381.0
-offset_bottom = 125.0
+offset_bottom = 143.0
 grow_horizontal = 1
 grow_vertical = 1
 size_flags_vertical = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Player"]
 layout_mode = 2
-offset_top = 129.0
+offset_top = 147.0
 offset_right = 381.0
-offset_bottom = 223.0
+offset_bottom = 232.0
 size_flags_vertical = 3
 
 [node name="Left Arm" parent="VBoxContainer/HBoxContainer/Player/HBoxContainer" instance=ExtResource("1_80oft")]
@@ -77,7 +67,7 @@ anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_right = 124.0
-offset_bottom = 94.0
+offset_bottom = 85.0
 grow_horizontal = 1
 grow_vertical = 1
 size_flags_horizontal = 3
@@ -89,7 +79,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 128.0
 offset_right = 252.0
-offset_bottom = 94.0
+offset_bottom = 85.0
 grow_horizontal = 1
 grow_vertical = 1
 size_flags_horizontal = 3
@@ -101,14 +91,14 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 256.0
 offset_right = 381.0
-offset_bottom = 94.0
+offset_bottom = 85.0
 grow_horizontal = 1
 grow_vertical = 1
 size_flags_horizontal = 3
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Player"]
 layout_mode = 2
-offset_top = 227.0
+offset_top = 236.0
 offset_right = 381.0
 offset_bottom = 322.0
 size_flags_vertical = 3
@@ -119,7 +109,7 @@ anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_right = 188.0
-offset_bottom = 95.0
+offset_bottom = 86.0
 grow_horizontal = 1
 grow_vertical = 1
 size_flags_horizontal = 3
@@ -131,7 +121,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 192.0
 offset_right = 381.0
-offset_bottom = 95.0
+offset_bottom = 86.0
 grow_horizontal = 1
 grow_vertical = 1
 size_flags_horizontal = 3
@@ -150,44 +140,33 @@ offset_right = 1152.0
 offset_bottom = 322.0
 size_flags_horizontal = 3
 
-[node name="Health" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Enemy"]
+[node name="HealthBar" parent="VBoxContainer/HBoxContainer/Enemy" instance=ExtResource("1_qteiv")]
 layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_right = 382.0
-offset_bottom = 27.0
-size_flags_horizontal = 3
-size_flags_vertical = 0
-
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Enemy/Health"]
-layout_mode = 2
-offset_right = 62.0
-offset_bottom = 26.0
-text = "HEALTH"
-
-[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/HBoxContainer/Enemy/Health"]
-layout_mode = 2
-offset_left = 66.0
-offset_right = 382.0
-offset_bottom = 27.0
-size_flags_horizontal = 3
-value = 100.0
+offset_bottom = 54.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Head" parent="VBoxContainer/HBoxContainer/Enemy" instance=ExtResource("1_80oft")]
 layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_top = 31.0
+offset_top = 58.0
 offset_right = 382.0
-offset_bottom = 125.0
+offset_bottom = 143.0
 grow_horizontal = 1
 grow_vertical = 1
 size_flags_vertical = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Enemy"]
 layout_mode = 2
-offset_top = 129.0
+offset_top = 147.0
 offset_right = 382.0
-offset_bottom = 223.0
+offset_bottom = 232.0
 size_flags_vertical = 3
 
 [node name="Left Arm" parent="VBoxContainer/HBoxContainer/Enemy/HBoxContainer" instance=ExtResource("1_80oft")]
@@ -196,7 +175,7 @@ anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_right = 124.0
-offset_bottom = 94.0
+offset_bottom = 85.0
 grow_horizontal = 1
 grow_vertical = 1
 size_flags_horizontal = 3
@@ -208,7 +187,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 128.0
 offset_right = 253.0
-offset_bottom = 94.0
+offset_bottom = 85.0
 grow_horizontal = 1
 grow_vertical = 1
 size_flags_horizontal = 3
@@ -220,14 +199,14 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 257.0
 offset_right = 382.0
-offset_bottom = 94.0
+offset_bottom = 85.0
 grow_horizontal = 1
 grow_vertical = 1
 size_flags_horizontal = 3
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Enemy"]
 layout_mode = 2
-offset_top = 227.0
+offset_top = 236.0
 offset_right = 382.0
 offset_bottom = 322.0
 size_flags_vertical = 3
@@ -238,7 +217,7 @@ anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_right = 189.0
-offset_bottom = 95.0
+offset_bottom = 86.0
 grow_horizontal = 1
 grow_vertical = 1
 size_flags_horizontal = 3
@@ -250,7 +229,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 193.0
 offset_right = 382.0
-offset_bottom = 95.0
+offset_bottom = 86.0
 grow_horizontal = 1
 grow_vertical = 1
 size_flags_horizontal = 3
