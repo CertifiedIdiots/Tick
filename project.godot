@@ -9,6 +9,11 @@
 config_version=5
 
 _global_script_classes=[{
+"base": "Entity",
+"class": &"Enemy",
+"language": &"GDScript",
+"path": "res://Enemy.gd"
+}, {
 "base": "RefCounted",
 "class": &"Entity",
 "language": &"GDScript",
@@ -25,6 +30,7 @@ _global_script_classes=[{
 "path": "res://Skill.gd"
 }]
 _global_script_class_icons={
+"Enemy": "",
 "Entity": "",
 "Part": "",
 "Skill": ""

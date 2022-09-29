@@ -1,8 +1,11 @@
 extends Node
 var skill_scene = preload("res://Skill.tscn")
 
+var random = RandomNumberGenerator.new()
+
+
 var player = Entity.new("YOU")
-var enemy = Entity.new("THEM")
+var enemy = Enemy.new("THEM")
 var skill_selected: Skill
 
 var player_container: Node
@@ -23,6 +26,8 @@ func _ready():
 		var scene = skill_scene.instantiate()
 		scene.init(skill, self)
 		skills_container.add_child(scene)
+		
+	random.randomize()
 
 func init_entity(entity: Entity, container: Node):
 	for part in entity.body_parts:
@@ -47,3 +52,12 @@ func toggle_parts(value: bool):
 func _process(delta):
 	for skill in player.skills:
 		skill.cooldown = min(skill.max_cooldown, skill.cooldown + delta)
+		
+	if enemy.health <= 0:
+		return
+		
+	for skill in enemy.skills:
+		skill.cooldown = min(skill.max_cooldown, skill.cooldown + delta)
+		if skill.cooldown >= skill.max_cooldown:
+			skill.use(player.body_parts[random.randi_range(0, player.body_parts.size() - 1)])
+			skill.cooldown = 0
