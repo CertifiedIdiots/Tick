@@ -11,6 +11,12 @@ var body_parts = [
 	Part.new("Right Leg", 100, 100, self)
 ]
 
+var body_parts_order = [
+	[0],
+	[1, 2, 3],
+	[4, 5]
+]
+
 var skills = [
 	Skill.new("BASH", 5),
 	Skill.new("SLASH", 3)

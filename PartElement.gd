@@ -6,6 +6,7 @@ var orchestrator
 func init(part: Part, orchestrator):
 	self.part = part
 	self.orchestrator = orchestrator
+	self.name = part.name
 	$Button.text = part.name
 
 func _process(delta):

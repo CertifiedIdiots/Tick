@@ -20,7 +20,7 @@ func _process(delta):
 		else:
 			$Button.disabled = false
 
-func _on_button_pressed():
+func _on_Button_pressed():
 	orchestrator.select_skill(skill)
 
 func toggle(value = null):

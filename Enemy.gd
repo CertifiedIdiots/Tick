@@ -1,6 +1,5 @@
 class_name Enemy
 extends Entity
 
-func _init(name: String):
-	super(name)
+func _init(name: String).(name):
 	skills = [Skill.new("BASH", 3)]
