@@ -12,22 +12,22 @@ _global_script_classes=[ {
 "base": "Entity",
 "class": "Enemy",
 "language": "GDScript",
-"path": "res://Enemy.gd"
+"path": "res://Game/Enemy.gd"
 }, {
 "base": "Reference",
 "class": "Entity",
 "language": "GDScript",
-"path": "res://Entity.gd"
+"path": "res://Game/Entity.gd"
 }, {
 "base": "Reference",
 "class": "Part",
 "language": "GDScript",
-"path": "res://Part.gd"
+"path": "res://Game/Part.gd"
 }, {
 "base": "Reference",
 "class": "Skill",
 "language": "GDScript",
-"path": "res://Skill.gd"
+"path": "res://Game/Skill.gd"
 } ]
 _global_script_class_icons={
 "Enemy": "",

@@ -1,6 +1,6 @@
 extends Node
-var skill_scene = preload("res://Skill.tscn")
-var part_scene = preload("res://Part.tscn")
+var skill_scene = preload("res://Components/Skill.tscn")
+var part_scene = preload("res://Components/Part.tscn")
 
 var random = RandomNumberGenerator.new()
 
