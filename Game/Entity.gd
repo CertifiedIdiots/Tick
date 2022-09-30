@@ -3,7 +3,7 @@ class_name Entity
 var health = 150
 var max_health = 150
 var body_parts = [
-	Part.new("Head", 100, 100, self),
+	Head.new(100, 100, self),
 	Part.new("Left Arm", 100, 100, self),
 	Part.new("Torso", 100, 100, self),
 	Part.new("Right Arm", 100, 100, self),
