@@ -3,12 +3,12 @@ class_name Entity
 var health = 500
 var max_health = 500
 var body_parts = [
-	Head.new(100, 100, self),
-	Part.new("Left Arm", 150, 150, self),
-	Part.new("Torso", 300, 300, self),
-	Part.new("Right Arm", 150, 150, self),
-	Part.new("Left Leg", 150, 150, self),
-	Part.new("Right Leg", 150, 150, self)
+	Head.new(100, 100, 0.25,  self),
+	Part.new("Left Arm", 150, 150, 0.50, self),
+	Part.new("Torso", 300, 300, 0.75, self),
+	Part.new("Right Arm", 150, 150, 0.50, self),
+	Part.new("Left Leg", 150, 150, 0.50, self),
+	Part.new("Right Leg", 150, 150, 0.50, self)
 ]
 
 var body_parts_order = [
@@ -22,6 +22,8 @@ var skills = [
 	Skill.new("SLASH", 3, 30),
 	Skill.new("STAB", 1, 10)
 ]
+
+var accuracy = 3.0
 
 var name
 

@@ -12,4 +12,12 @@ func _init(name: String, cooldown: float, damage: float):
 	self.damage = damage
 	
 func use(on: Part):
-	on.damage(damage)
+	var hit_chance = (on.hit_chance * 1.0) # the multiplier needs to be player/enemy accuracy. I forgot how to call things right .-.
+	var roll = RandomNumberGenerator.new()
+	roll.randomize()
+	var result = roll.randf_range(0, 1.0)
+	if result < hit_chance:
+		on.damage(damage)
+		print("HIT! - ", on.name, " ", "(", hit_chance*100, "%)")
+	else:
+		print("MISSED! - ", on.name, " ", "(", hit_chance*100, "%)")

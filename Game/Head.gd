@@ -1,7 +1,7 @@
 extends Part
 class_name Head
 
-func _init(health: float, maximum_health: float, owner).("Head", health, maximum_health, owner):
+func _init(health: float, maximum_health: float, hit_chance: float, owner).("Head", health, maximum_health, hit_chance, owner):
 	pass
 
 func damage(amount):
