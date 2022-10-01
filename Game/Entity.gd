@@ -23,7 +23,7 @@ var skills = [
 	Skill.new("STAB", 1, 10, self)
 ]
 
-var accuracy = 3.0
+var accuracy = 1.5
 
 var name
 

@@ -29,6 +29,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Game/Part.gd"
 }, {
+"base": "Entity",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Game/Player.gd"
+}, {
 "base": "Reference",
 "class": "Skill",
 "language": "GDScript",
@@ -39,6 +44,7 @@ _global_script_class_icons={
 "Entity": "",
 "Head": "",
 "Part": "",
+"Player": "",
 "Skill": ""
 }
 
