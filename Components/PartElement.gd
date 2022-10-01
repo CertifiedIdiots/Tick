@@ -11,7 +11,7 @@ func init(part: Part, orchestrator):
 
 func _process(delta):
 	if part != null:
-		$ProgressBar.value = part.health
+		$ProgressBar.value = (part.health/part.maximum_health)*100
 
 func toggle(value: bool):
 	$Button.disabled = !value
