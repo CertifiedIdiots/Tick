@@ -18,9 +18,9 @@ var body_parts_order = [
 ]
 
 var skills = [
-	Skill.new("BASH", 5, 50),
-	Skill.new("SLASH", 3, 30),
-	Skill.new("STAB", 1, 10)
+	Skill.new("BASH", 5, 50, self),
+	Skill.new("SLASH", 3, 30, self),
+	Skill.new("STAB", 1, 10, self)
 ]
 
 var accuracy = 3.0
