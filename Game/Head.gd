@@ -6,6 +6,6 @@ func _init(health: float, maximum_health: float, owner).("Head", health, maximum
 
 func damage(amount):
 	health = max(0, health - amount)
+	owner.damage(amount)
 	if health <= 0:
-		pass
-		# kill entity?
+		owner.health = 0
