@@ -8,10 +8,11 @@ func init(part: Part, orchestrator):
 	self.orchestrator = orchestrator
 	self.name = part.name
 	$Button.text = part.name
+	$ProgressBar.max_value = part.maximum_health
 
 func _process(delta):
 	if part != null:
-		$ProgressBar.value = (part.health/part.maximum_health)*100
+		$ProgressBar.value = part.health
 
 func toggle(value: bool):
 	$Button.disabled = !value
