@@ -22,7 +22,7 @@ func _ready():
 	init_entity(enemy, enemy_container)
 		
 	skills_container = root.find_node("Skills")
-	for skill in player.skills:
+	for skill in player.skills():
 		var scene = skill_scene.instance()
 		scene.init(skill, self)
 		skills_container.add_child(scene)
@@ -48,7 +48,7 @@ func select_skill(skill: Skill):
 	toggle_parts(true)
 
 func use_skill(on: Part):
-	skill_selected.use(on)
+	skill_selected.use(player, on)
 	skills_container.get_node(skill_selected.name).toggle(true)
 	skill_selected.cooldown = 0
 	skill_selected = null
@@ -59,14 +59,14 @@ func toggle_parts(value: bool):
 		enemy_container.find_node(part.name, true, false).toggle(value)
 
 func _process(delta):
-	for skill in player.skills:
+	for skill in player.skills():
 		skill.cooldown = min(skill.max_cooldown, skill.cooldown + delta)
 		
 	if enemy.health <= 0:
 		return
 		
-	for skill in enemy.skills:
+	for skill in enemy.skills():
 		skill.cooldown = min(skill.max_cooldown, skill.cooldown + delta)
 		if skill.cooldown >= skill.max_cooldown:
-			skill.use(player.body_parts[random.randi_range(0, player.body_parts.size() - 1)])
+			skill.use(enemy, player.body_parts[random.randi_range(0, player.body_parts.size() - 1)])
 			skill.cooldown = 0

@@ -17,11 +17,10 @@ var body_parts_order = [
 	[4, 5]
 ]
 
-var skills = [
-	Skill.new("BASH", 5, 50, self),
-	Skill.new("SLASH", 3, 30, self),
-	Skill.new("STAB", 1, 10, self)
-]
+var slots = {
+	"Left Arm": Items.weapon("Sword"),
+	"Right Arm": Items.weapon("Mace")
+}
 
 var accuracy = 1.5
 
@@ -32,3 +31,10 @@ func _init(name: String):
 
 func damage(amount: float):
 	health = max(0, health - amount)
+
+func skills():
+	var list = []
+	for item in slots.values():
+		if item != null:
+			list.append_array(item.skills)
+	return list

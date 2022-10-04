@@ -12,32 +12,37 @@ _global_script_classes=[ {
 "base": "Entity",
 "class": "Enemy",
 "language": "GDScript",
-"path": "res://Game/Enemy.gd"
+"path": "res://Game/Entities/Enemy.gd"
 }, {
 "base": "Reference",
 "class": "Entity",
 "language": "GDScript",
-"path": "res://Game/Entity.gd"
+"path": "res://Game/Entities/Entity.gd"
 }, {
 "base": "Part",
 "class": "Head",
 "language": "GDScript",
-"path": "res://Game/Head.gd"
+"path": "res://Game/Parts/Head.gd"
 }, {
 "base": "Reference",
 "class": "Part",
 "language": "GDScript",
-"path": "res://Game/Part.gd"
+"path": "res://Game/Parts/Part.gd"
 }, {
 "base": "Entity",
 "class": "Player",
 "language": "GDScript",
-"path": "res://Game/Player.gd"
+"path": "res://Game/Entities/Player.gd"
 }, {
 "base": "Reference",
 "class": "Skill",
 "language": "GDScript",
 "path": "res://Game/Skill.gd"
+}, {
+"base": "Reference",
+"class": "Weapon",
+"language": "GDScript",
+"path": "res://Game/Items/Weapon.gd"
 } ]
 _global_script_class_icons={
 "Enemy": "",
@@ -45,7 +50,8 @@ _global_script_class_icons={
 "Head": "",
 "Part": "",
 "Player": "",
-"Skill": ""
+"Skill": "",
+"Weapon": ""
 }
 
 [application]
@@ -53,6 +59,10 @@ _global_script_class_icons={
 config/name="Voidsea"
 run/main_scene="res://Game.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Items="*res://Game/Items/Items.gd"
 
 [gui]
 
