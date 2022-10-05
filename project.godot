@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Reference",
+"class": "Armor",
+"language": "GDScript",
+"path": "res://Game/Items/Armor.gd"
+}, {
 "base": "Entity",
 "class": "Enemy",
 "language": "GDScript",
@@ -45,6 +50,7 @@ _global_script_classes=[ {
 "path": "res://Game/Items/Weapon.gd"
 } ]
 _global_script_class_icons={
+"Armor": "",
 "Enemy": "",
 "Entity": "",
 "Head": "",

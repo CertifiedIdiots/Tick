@@ -19,7 +19,14 @@ var body_parts_order = [
 
 var slots = {
 	"Left Arm": Items.weapon("Sword"),
-	"Right Arm": Items.weapon("Mace")
+	"Right Arm": Items.weapon("Mace"),
+	"Third Arm": Items.weapon("Spear"),
+}
+
+var armor_slots = {
+	"Head": Items.armor("Helmet"),
+	"Torso": Items.armor("Chestplate"),
+	"Legs": Items.armor("Leggings")
 }
 
 var accuracy = 1.5
