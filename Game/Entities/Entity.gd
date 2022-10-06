@@ -28,7 +28,9 @@ var slots = {
 	"Third Arm": Items.weapon("Spear"),
 	"Head": Items.armor("Helmet"),
 	"Torso": Items.armor("Chestplate"),
-	"Legs": Items.armor("Leggings")
+	"Legs": Items.armor("Leggings"),
+#	"Ability1": Abilities.spell("Precision")
+#	"Ability2": Abilities.spell("Dodge")
 }
 
 func _init(name: String):
@@ -43,6 +45,8 @@ func skills():
 		if item != null and "skills" in item:
 			list.append_array(item.skills)
 	return list
+	
+	
 
 func get_random_part(exclude: Part):
 	while true:
