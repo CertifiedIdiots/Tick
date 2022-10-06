@@ -42,7 +42,12 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "Skill",
 "language": "GDScript",
-"path": "res://Game/Skill.gd"
+"path": "res://Game/Abilities/Skill.gd"
+}, {
+"base": "Reference",
+"class": "Spell",
+"language": "GDScript",
+"path": "res://Game/Abilities/Spell.gd"
 }, {
 "base": "Reference",
 "class": "Weapon",
@@ -57,6 +62,7 @@ _global_script_class_icons={
 "Part": "",
 "Player": "",
 "Skill": "",
+"Spell": "",
 "Weapon": ""
 }
 
