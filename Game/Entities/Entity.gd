@@ -29,8 +29,7 @@ var slots = {
 	"Head": Items.armor("Helmet"),
 	"Torso": Items.armor("Chestplate"),
 	"Legs": Items.armor("Leggings"),
-#	"Ability1": Abilities.spell("Precision")
-#	"Ability2": Abilities.spell("Dodge")
+	"Ability1": Abilities.spell("Precision")
 }
 
 func _init(name: String):
