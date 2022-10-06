@@ -1,7 +1,12 @@
 class_name Entity
 
+var name
+
 var health = 500
 var max_health = 500
+var accuracy = 1.5
+var dodge_chance = 0.1
+
 var body_parts = [
 	Head.new(100, 100, 0.25,  self),
 	Part.new("Left Arm", 150, 150, 0.50, self),
@@ -26,10 +31,6 @@ var slots = {
 	"Legs": Items.armor("Leggings")
 }
 
-var accuracy = 1.5
-
-var name
-
 func _init(name: String):
 	self.name = name
 
@@ -39,7 +40,7 @@ func damage(amount: float):
 func skills():
 	var list = []
 	for item in slots.values():
-		if item != null and item.skills:
+		if item != null and "skills" in item:
 			list.append_array(item.skills)
 	return list
 

@@ -13,9 +13,20 @@ func _init(name: String, cooldown: float, damage: float):
 	
 func use(owner, on: Part):
 	var hit_chance = (on.hit_chance * owner.accuracy) 
+	var dodge_chance = on.owner.dodge_chance
+	var random_chance = 0.2
+	
 	var result = randf()
-	if result < hit_chance:
+	var dodge_result = randf()
+	var random_result = randf()
+	
+	if result < hit_chance and dodge_result > dodge_chance:
 		on.damage(damage)
 		print("HIT! - ", on.name, " ", "(", hit_chance*100, "%)")
-	else:
+	elif result > hit_chance and random_result < random_chance and dodge_result > dodge_chance:
+		on.owner.get_random_part(on).damage(damage)
+		print("HIT RANDOM!")
+	elif result > hit_chance and random_result > random_chance and dodge_result > dodge_chance:
 		print("MISSED! - ", on.name, " ", "(", hit_chance*100, "%)")
+	else:
+		print("DODGED!")
