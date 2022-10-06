@@ -21,9 +21,6 @@ var slots = {
 	"Left Arm": Items.weapon("Sword"),
 	"Right Arm": Items.weapon("Mace"),
 	"Third Arm": Items.weapon("Spear"),
-}
-
-var armor_slots = {
 	"Head": Items.armor("Helmet"),
 	"Torso": Items.armor("Chestplate"),
 	"Legs": Items.armor("Leggings")
@@ -42,6 +39,13 @@ func damage(amount: float):
 func skills():
 	var list = []
 	for item in slots.values():
-		if item != null:
+		if item != null and item.skills:
 			list.append_array(item.skills)
 	return list
+
+func get_random_part(exclude: Part):
+	while true:
+		var index = randi() % body_parts.size()
+		if body_parts[index] != exclude:
+			return body_parts[index]
+	
