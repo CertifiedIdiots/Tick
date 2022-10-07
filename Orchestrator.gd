@@ -12,6 +12,13 @@ var player_container: Node
 var enemy_container: Node
 var skills_container: Node
 
+const skill_controls = {
+	"skill_1": 0,
+	"skill_2": 1,
+	"skill_3": 2,
+	"skill_4": 3
+}
+
 func _ready():
 	var root = get_parent()
 	
@@ -59,6 +66,10 @@ func toggle_parts(value: bool):
 		enemy_container.find_node(part.name, true, false).toggle(value)
 
 func _process(delta):
+	for input in skill_controls.keys():
+		if Input.is_action_just_pressed(input):
+			select_skill(player.skills()[skill_controls[input]])
+			
 	for skill in player.skills():
 		skill.cooldown = min(skill.max_cooldown, skill.cooldown + delta)
 		

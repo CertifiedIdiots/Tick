@@ -44,8 +44,6 @@ func skills():
 		if item != null and "skills" in item:
 			list.append_array(item.skills)
 	return list
-	
-	
 
 func get_random_part(exclude: Part):
 	while true:
