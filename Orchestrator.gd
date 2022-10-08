@@ -66,11 +66,17 @@ func toggle_parts(value: bool):
 		enemy_container.find_node(part.name, true, false).toggle(value)
 
 func _process(delta):
+	var player_skills = player.skills()
+	
 	for input in skill_controls.keys():
-		if Input.is_action_just_pressed(input):
-			select_skill(player.skills()[skill_controls[input]])
+		if skill_controls[input] > player_skills.size() - 1:
+			break
 			
-	for skill in player.skills():
+		var skill = player_skills[skill_controls[input]]
+		if Input.is_action_just_pressed(input) and skill.cooldown >= skill.max_cooldown:
+			select_skill(player_skills[skill_controls[input]])
+
+	for skill in player_skills:
 		skill.cooldown = min(skill.max_cooldown, skill.cooldown + delta)
 		
 	if enemy.health <= 0:
