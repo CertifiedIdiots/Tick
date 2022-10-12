@@ -1,6 +1,9 @@
 class_name Player
 extends Entity
 
+
+
+
 func _init(name: String).(name):
 	body_parts = [
 		Head.new(100, 100, 0.25,  self),

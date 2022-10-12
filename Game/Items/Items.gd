@@ -21,6 +21,7 @@ class Spear extends Item:
 func weapon(name: String):
 	return weapons[name].new()
 	
+	
 var armor = {
 	"Helmet": Helmet,
 	"Chestplate": Chestplate,

@@ -6,6 +6,14 @@ var health = 500
 var max_health = 500
 var accuracy = 1.5
 var dodge_chance = 0.1
+var speed = 10
+
+#var stats = {
+#	"accuracy": 1.5,
+#	"dodge_chance": 0.1,
+#	"speed": 10
+#}
+
 
 var body_parts = [
 	Head.new(100, 100, 0.25,  self),
