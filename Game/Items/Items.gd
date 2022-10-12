@@ -6,15 +6,15 @@ var weapons = {
 	"Spear": Spear
 }
 
-class Sword extends Weapon:
+class Sword extends Item:
 	func _init().("Sword", ["Left Arm", "Right Arm"], [Skill.new("SLASH", 3, 25)]):
 		pass
 
-class Mace extends Weapon:
+class Mace extends Item:
 	func _init().("Mace", ["Left Arm", "Right Arm"], [Skill.new("BASH", 5, 50)]):
 		pass
 
-class Spear extends Weapon:
+class Spear extends Item:
 	func _init().("Spear", [], [Skill.new("STAB", 1, 10)]):
 		pass
 
@@ -27,16 +27,16 @@ var armor = {
 	"Leggings": Leggings
 }
 
-class Helmet extends Armor:
-	func _init().("Helmet", ["Head"], 10, -2):
+class Helmet extends Item:
+	func _init().("Helmet", ["Head"]):
 		pass
 
-class Chestplate extends Armor:
-	func _init().("Chestplate", ["Torso"], 10, -2):
+class Chestplate extends Item:
+	func _init().("Chestplate", ["Torso"]):
 		pass
 
-class Leggings extends Armor:
-	func _init().("Leggings", ["Legs"], 10, -2):
+class Leggings extends Item:
+	func _init().("Leggings", ["Legs"]):
 		pass
 
 func armor(name: String):

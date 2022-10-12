@@ -4,7 +4,7 @@ var part_scene = preload("res://Components/Part.tscn")
 
 var random = RandomNumberGenerator.new()
 
-var player = Entity.new("YOU")
+var player = Player.new("YOU")
 var enemy = Enemy.new("THEM")
 var skill_selected: Skill
 

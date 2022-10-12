@@ -15,7 +15,7 @@ func init(skill: Skill, orchestrator):
 func _process(delta):
 	if skill != null:
 		$ProgressBar.value = skill.cooldown
-		if skill.cooldown < skill.max_cooldown or orchestrator.skill_selected == skill:
+		if skill.cooldown < skill.max_cooldown or orchestrator.skill_selected == skill or skill.disabled:
 			$Button.disabled = true
 		else:
 			$Button.disabled = false

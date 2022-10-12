@@ -4,6 +4,7 @@ var name: String
 var cooldown: float
 var max_cooldown: float
 var damage: float
+var disabled = false
 const random_chance = 0.2
 
 func _init(name: String, cooldown: float, damage: float):

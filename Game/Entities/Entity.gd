@@ -22,15 +22,7 @@ var body_parts_order = [
 	[4, 5]
 ]
 
-var slots = {
-	"Left Arm": Items.weapon("Sword"),
-	"Right Arm": Items.weapon("Mace"),
-	"Third Arm": Items.weapon("Spear"),
-	"Head": Items.armor("Helmet"),
-	"Torso": Items.armor("Chestplate"),
-	"Legs": Items.armor("Leggings"),
-	"Ability1": Abilities.spell("Precision")
-}
+var slots = []
 
 func _init(name: String):
 	self.name = name
@@ -40,9 +32,9 @@ func damage(amount: float):
 
 func skills():
 	var list = []
-	for item in slots.values():
-		if item != null and "skills" in item:
-			list.append_array(item.skills)
+	for slot in slots:
+		if not slot.disabled:
+			list.append_array(slot.skills())
 	return list
 
 func get_random_part(exclude: Part):
