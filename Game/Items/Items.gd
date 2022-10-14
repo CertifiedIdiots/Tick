@@ -29,7 +29,7 @@ var armor = {
 }
 
 class Helmet extends Item:
-	func _init().("Helmet", ["Head"]):
+	func _init().("Helmet", ["Head"], [], [1, 4, 2]):
 		pass
 
 class Chestplate extends Item:

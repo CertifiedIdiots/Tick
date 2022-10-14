@@ -5,7 +5,7 @@ var cooldown: float
 var max_cooldown: float
 var damage: float
 var disabled = false
-const random_chance = 0.2
+const random_chance = 0.1
 
 func _init(name: String, cooldown: float, damage: float):
 	self.name = name
@@ -14,10 +14,10 @@ func _init(name: String, cooldown: float, damage: float):
 	self.damage = damage
 	
 func use(owner, on: Part):
-	var hit_chance = (on.hit_chance * owner.accuracy) 
+	var hit_chance = (on.hit_chance * owner.stats["accuracy"]) 
 
 	var hit = randf() < hit_chance
-	var failed_dodge = randf() > on.owner.dodge_chance
+	var failed_dodge = randf() > on.owner.stats["dodge_chance"]
 	var hit_random_part = randf() > random_chance
 	
 	if hit and failed_dodge:
