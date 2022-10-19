@@ -53,11 +53,6 @@ _global_script_classes=[ {
 "class": "Slot",
 "language": "GDScript",
 "path": "res://Game/Items/Slot.gd"
-}, {
-"base": "Reference",
-"class": "Spell",
-"language": "GDScript",
-"path": "res://Game/Abilities/Spell.gd"
 } ]
 _global_script_class_icons={
 "Arm": "",
@@ -68,8 +63,7 @@ _global_script_class_icons={
 "Part": "",
 "Player": "",
 "Skill": "",
-"Slot": "",
-"Spell": ""
+"Slot": ""
 }
 
 [application]
