@@ -75,7 +75,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Items="*res://Game/Items/Items.gd"
-Abilities="*res://Game/Abilities/Abilities.gd"
+Skills="*res://Game/Abilities/Skills.gd"
 
 [gui]
 

@@ -7,15 +7,15 @@ var weapons = {
 }
 
 class Sword extends Item:
-	func _init().("Sword", ["Left Arm", "Right Arm"], ["Slash"], []):
+	func _init().("Sword", ["Left Arm", "Right Arm"], [Skills.get("Slash")]):
 		pass
 
 class Mace extends Item:
-	func _init().("Mace", ["Left Arm", "Right Arm"], ["Bash"], []):
+	func _init().("Mace", ["Left Arm", "Right Arm"], [Skills.get("Slash")]):
 		pass
 
 class Spear extends Item:
-	func _init().("Spear", [], ["Stab"], []):
+	func _init().("Spear", [], [Skills.get("Slash")]):
 		pass
 
 func weapon(name: String):

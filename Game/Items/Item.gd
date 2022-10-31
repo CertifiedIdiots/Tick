@@ -5,7 +5,7 @@ var slots
 var skills
 var stats
 
-func _init(name: String, slots, skills = [], stats = []):
+func _init(name: String, slots, skills = [], stats = {}):
 	self.name = name
 	self.slots = slots
 	self.skills = skills

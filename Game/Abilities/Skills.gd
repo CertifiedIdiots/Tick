@@ -1,15 +1,15 @@
 extends Node
 
-var attacks = {
+var skills = {
 	"Slash": Slash
 }
 
 class Slash extends Skill:
-	func _init().("Slash", ["Left Arm"], 10, damage_type.slash, effect.damage):
+	func _init().("Slash", ["Left Arm"], 10):
 		pass
 
-func attack(name: String):
-	return attacks[name].new()
+func get(name: String):
+	return skills[name].new()
 
 
 #var spells = {

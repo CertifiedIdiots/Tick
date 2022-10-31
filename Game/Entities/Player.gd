@@ -31,9 +31,7 @@ func _init(name: String).(name):
 		Slot.new("Third Arm", Items.weapon("Spear")),
 		Slot.new("Head", Items.armor("Helmet")),
 		Slot.new("Torso", Items.armor("Chestplate")),
-		Slot.new("Legs", Items.armor("Leggings")),
-		Slot.new("Ability1", Abilities.attack("Slash"))
-		
+		Slot.new("Legs", Items.armor("Leggings"))
 	]
 	
 	body_parts[1].slot = slots[0]
